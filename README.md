@@ -1,2 +1,0 @@
-# geekscodex
-Geeks Codex Website

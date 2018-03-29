@@ -1,0 +1,76 @@
+body {
+  font: normal 15px / 25px Helvetica, 'Segoe UI', Tahoma, Arial, sans-serif;
+  text-align: center;
+  color: #0f3f75;
+  background: #88C03C url(../images/default_landing/background.jpg) center top repeat-x;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: #0f3f75;
+}
+
+a:focus,
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+p {
+  padding: 0;
+  margin: 11px;
+}
+
+.important {
+  font-weight: bold;
+}
+
+.holding-container {
+  background-image: url(../images/default_landing/sign.png);
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  height: 507px;
+  width: 868px;
+}
+
+.holding-container::before {
+  display: block;
+  position: absolute;
+  top: 3.8rem;
+  left: 50%;
+  content: '';
+  background: center / contain no-repeat;
+  transform: translateX(-50%);
+}
+
+.holding-container.is-nursery::before {
+  width: 24rem;
+  height: 7.6rem;
+  background-image: url(../images/nurserysite-logo.svg);
+}
+
+.holding-container.is-primary::before {
+  width: 28rem;
+  height: 10rem;
+  background-image: url(../images/primarysite-logo.svg);
+}
+
+.holding-container > img {
+  padding-top: 60px;
+}
+
+.content {
+  position: absolute;
+  top: 225px;
+  width: 655px;
+  left: 95px;
+}
+
+.link {
+  padding-top: 32px;
+}
