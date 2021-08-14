@@ -9,31 +9,28 @@ import {
 import logo from './logo.svg';
 import './App.css';
 import Welcome from './welcome';
-import Games from './games'
+import Games from './games';
+import Twitch from './twitch';
+import video from './video/outset.webm';
 
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-
+      
     }
+
+    this.closeNav = this.closeNav.bind(this);
   }
 
   componentDidMount(){
     const app = this;
-    let variable = 'variable';
-    variable += ' more text';
-    let i = 0;
-    i++;
-    let var2 = 'shit';
-    let var3 = 'fuck';
-    console.log(i);
-    console.log(`this is also a string but here is a variable -> ${variable} but I dont worry about it here ${var2} or here ${var3}`);
   }
 
-  footerText(){
-    return 'This is footer Text';
+  closeNav(){
+    let ref = 'nav';
+    this.refs[ref].checked = !this.refs[ref].checked;
   }
 
   render(){
@@ -42,8 +39,8 @@ class App extends Component {
         <div className="App">
           <Redirect to="/" />
           <nav className="topnav">
-            <input className="menu-btn" type="checkbox" id="menu-btn" ref="nav" />
-            <label className="menu-icon" htmlfor="menu-btn">
+            <input className="menu-btn" type="checkbox" id="menu-btn" ref={'nav'} />
+            <label className="menu-icon" htmlFor="menu-btn">
               <span className="navicon"></span>
             </label>
             <ul className="menu">
@@ -59,6 +56,15 @@ class App extends Component {
               <li>
                 <NavLink
                   exact
+                  to="/twitch/"
+                  activeClassName="active"
+                  onClick={this.closeNav}>
+                    Twitch
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  exact
                   to="/games/"
                   activeClassName="active"
                   onClick={this.closeNav}>
@@ -69,12 +75,17 @@ class App extends Component {
           </nav>
 
           <footer>
-            {this.footerText}
+            <p>The Geeks Codex</p>
           </footer>
+          <video playsInline autoPlay muted loop id="bgvid">
+            <source src={video} type="video/webm"/>
+          </video>
+
         </div>
 
         <Switch>
           <Route exact path="/" component={Welcome} />
+          <Route exact path="/twitch/" component={Twitch} />
           <Route exact path="/games/" component={Games} />
         </Switch>
       </HashRouter>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactPlayer from "react-player";
  
  
-class Welcome extends Component {
+class Twitch extends Component {
     constructor() {
         super();
     
@@ -15,13 +15,11 @@ class Welcome extends Component {
     render(){
         return (
             <div className="welcome">
-                <div className="logo"></div>
+                <div className="logo"></div>              
 
-                <div className="latest"></div>
-
-                <div className="youtubeVideo">
+                <div className="twitchStream">
                     <ReactPlayer
-                        url="https://www.youtube.com/watch?v=gTrQiq8EsOY"
+                        url="https://www.twitch.tv/GeeksCodex"
                         playing={true}
                         pip={true}
                         controls
@@ -32,4 +30,4 @@ class Welcome extends Component {
     }
 }
 
-export default Welcome;
+export default Twitch;

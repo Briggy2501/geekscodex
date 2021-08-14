@@ -19,6 +19,15 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
  
 h1 {
   font-size: 3rem;
@@ -32,11 +41,11 @@ h1 {
 }
  
 .topnav {
-  background: url('./images/logo192.png') top right no-repeat #333;
+  background: url('./images/d20logo_small.png') top right no-repeat #333;
   overflow: hidden;
-  padding-right: 12rem;
+  padding-right: 7.3rem;
   position: fixed;
-  width: calc(100vw - 11.8rem);
+  width: calc(100vw - 7.3rem);
   z-index: 3;
   top: 0;
 }
@@ -70,8 +79,8 @@ h1 {
  
 /* Add a color to the active/current link */
 .topnav ul li a.active {
-  background-color: #f53f02;
-  color: #f2f2f2;
+  background-color: #02f5e9;
+  color: #333;
 }
  
 .topnav ul {
@@ -96,6 +105,7 @@ h1 {
 .topnav .menu-icon {
   cursor: pointer;
   display: inline-block;
+  float: left;
   padding: 2.8rem 2rem;
   position: relative;
   user-select: none;
@@ -156,7 +166,54 @@ h1 {
 .topnav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
- 
+
+.welcome {
+  padding-bottom: 5rem;
+}
+
+.logo{
+  background: url('./images/logo.png') center no-repeat;
+  overflow: hidden;
+  position: relative;
+  width: 70rem;
+  height: 10rem;
+  margin: 6rem auto 0;
+  top: 0;
+}
+
+.latest{
+  background: url('./images/latestepisode.png') center no-repeat;
+  overflow: hidden;
+  position: relative;
+  width: 60rem;
+  height: 13rem;
+  margin: 1rem auto 0;
+  top: 0;
+  z-index: 1;
+}
+
+.youtubeVideo {
+  background: url('./images/border.png') center no-repeat;
+  margin: -8rem auto 0;
+  position: relative;
+  display: block;
+  width: 64rem;
+  padding: 3.5rem;
+  background-size: 71.8rem 43.7rem;
+  background-position: -0.4rem -0.2rem;
+}
+
+.twitchStream{
+  background: url('./images/border.png') center no-repeat;
+  margin: 2rem auto 0;
+  position: relative;
+  display: block;
+  width: 64rem;
+  padding: 3.5rem;
+  background-size: 71.8rem 43.7rem;
+  background-position: -0.4rem -0.2rem;
+}
+
 @media (min-width: 765px) {
   .componentContainer {
     padding-top: 5rem;
@@ -183,10 +240,13 @@ h1 {
 /* Place the navbar at the bottom of the page, and make it stick */
 footer {
   background-color: #333;
+  color: #f5f5f5;
   overflow: hidden;
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 1;
+  height: 5rem;
 }
  
 /* Style the links inside the navigation bar */
@@ -231,7 +291,7 @@ footer a.active {
 .form {
   position: relative;
   z-index: 1;
-  background: url('./images/logo192.png') center 4.5rem no-repeat #fff;
+  background: url('./images/d20logo_small.png') center 4.5rem no-repeat #fff;
   max-width: 36rem;
   margin: 0 auto 10rem;
   padding: 15.6rem 4.5rem 4.5rem;
