@@ -38,7 +38,7 @@ class Welcome extends Component {
                             The Geeks Codex is a collection of works created by Matthew Briggs.
                         </p>
                         <p>
-                            Included here within the archieve you will find:
+                            Included here within the archive you will find:
                             <ul>
                                 <li>The Ebon Death: A D&amp;D 5th Edition Homebrew Campaign which airs live on Twitch every Wednesday at 8pm UK Time</li>
                                 <li>The Ebon Death: Youtube Playlist - Catch up on previously aired Episodes</li>
