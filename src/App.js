@@ -11,7 +11,8 @@ import './App.css';
 import Welcome from './welcome';
 import Games from './games';
 import Twitch from './twitch';
-import video from './video/outset.webm';
+import video from './video/glass.mp4';
+import CookieConsent from "react-cookie-consent";
 
 class App extends Component {
   constructor() {
@@ -74,20 +75,21 @@ class App extends Component {
             </ul>
           </nav>
 
+          <Switch>
+            <Route exact path="/" component={Welcome} />
+            <Route exact path="/twitch/" component={Twitch} />
+            <Route exact path="/games/" component={Games} />
+          </Switch>
+
           <footer>
-            <p>The Geeks Codex</p>
+            <p>The Geeks Codex Ⓒ 2021</p>
+            <a target="_blank" href="http://www.videezy.com">Broll by Videezy</a>
           </footer>
           <video playsInline autoPlay muted loop id="bgvid">
             <source src={video} type="video/webm"/>
           </video>
-
+          <CookieConsent>This website uses cookies to enhance the user experience.</CookieConsent>
         </div>
-
-        <Switch>
-          <Route exact path="/" component={Welcome} />
-          <Route exact path="/twitch/" component={Twitch} />
-          <Route exact path="/games/" component={Games} />
-        </Switch>
       </HashRouter>
     );
   }

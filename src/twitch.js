@@ -14,7 +14,7 @@ class Twitch extends Component {
     
     render(){
         return (
-            <div className="welcome">
+            <div className="twitch main">
                 <div className="logo"></div>              
 
                 <div className="twitchStream">
