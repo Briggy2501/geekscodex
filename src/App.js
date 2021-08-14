@@ -13,16 +13,18 @@ import Games from './games';
 import Twitch from './twitch';
 import video from './video/glass.mp4';
 import CookieConsent from "react-cookie-consent";
+import Konami from 'react-konami-code';
 
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      
+      konamiDynamicClass: ''
     }
 
     this.closeNav = this.closeNav.bind(this);
+    this.konamiClass = this.konamiClass.bind(this);
   }
 
   componentDidMount(){
@@ -34,12 +36,18 @@ class App extends Component {
     this.refs[ref].checked = !this.refs[ref].checked;
   }
 
+  konamiClass = () => {
+    this.setState({
+      konamiDynamicClass: 'konami'
+    })
+  }
+
   render(){
     return (
       <HashRouter>
         <div className="App">
           <Redirect to="/" />
-          <nav className="topnav">
+          <nav className={`${this.state.konamiDynamicClass} topnav`}>
             <input className="menu-btn" type="checkbox" id="menu-btn" ref={'nav'} />
             <label className="menu-icon" htmlFor="menu-btn">
               <span className="navicon"></span>
@@ -88,6 +96,7 @@ class App extends Component {
           <video playsInline autoPlay muted loop id="bgvid">
             <source src={video} type="video/webm"/>
           </video>
+          <Konami action={this.konamiClass}></Konami>
           <CookieConsent>This website uses cookies to enhance the user experience.</CookieConsent>
         </div>
       </HashRouter>
