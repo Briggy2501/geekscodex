@@ -17,7 +17,7 @@ class Welcome extends Component {
     render(){
         return (
             <div className="welcome main">
-                <div className="logo"></div>
+                <div className="logo">The Geeks Codex</div>
 
                 <div className="latest"></div>
 

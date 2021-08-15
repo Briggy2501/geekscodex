@@ -1,0 +1,216 @@
+.ebonLogo {
+    background: url('./images/ebonlogo.png') center no-repeat;
+    height: 13rem;
+}
+
+.imageWrapper{
+    display: block;
+    height: 35rem;
+    width: 70rem;
+    overflow: hidden;
+    border: 0.2rem solid #888585;
+    padding: 0.2rem;
+    margin: 0 auto;
+    background: url('./images/ebonwhite.png') center no-repeat #333;
+}
+
+.imageContainer {
+    border: 0.6rem solid #888585;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding: 0.2rem;
+    margin: auto;
+    display: block;
+}
+
+.innerBorder {
+    position: relative;
+    border: 0.2rem solid #888585;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.playerImgLeft, .playerImgRight{
+    width: 33.7rem;
+    height: 32.4rem;
+    display: inline-block;
+    position: relative;
+}
+
+.playerImgLeft {
+    left: -36rem;
+    transition: left 2s;
+}
+
+.playerImgRight {
+    right: -36rem;
+    transition: right 2s;
+}
+
+.showImages .player .imageWrapper .imageContainer .innerBorder .playerImgLeft {
+    left: 0rem;
+}
+
+.showImages .player .imageWrapper .imageContainer .innerBorder .playerImgRight {
+    right: 0rem;
+}
+
+.dmLeft {
+    background: url('./images/players/dm.png') center no-repeat;
+    background-size: cover;
+}
+.dmRight {
+    background: url('./images/players/jorn.png') center no-repeat;
+    background-size: cover;
+}
+.capoLeft {
+    background: url('./images/players/capo.png') center no-repeat;
+    background-size: cover;
+}
+.capoRight {
+    background: url('./images/players/caporius.png') center no-repeat;
+    background-size: cover;
+}
+.emLeft{
+    background: url('./images/players/Emcam.png') center no-repeat;
+    background-size: cover;
+}
+.emRight{
+    background: url('./images/players/Em.png') center no-repeat;
+    background-size: cover;
+}
+.fannybawsLeft{
+    background: url('./images/players/russell.png') center no-repeat;
+    background-size: cover;
+}
+.fannybawsRight{
+    background: url('./images/players/Fannybaws.png') center no-repeat;
+    background-size: cover;
+}
+.ghershahLeft{
+    background: url('./images/players/memeCharles.png') center no-repeat;
+    background-size: cover;
+}
+.ghershahRight {
+    background: url('./images/players/Ghershah.png') center no-repeat;
+    background-size: cover;
+}
+.osgurLeft {
+    background:url('./images/players/aodh.png') center no-repeat;
+    background-size: cover;
+}
+.osgurRight {
+    background: url('./images/players/Osgur.png') center no-repeat;
+    background-size: cover;
+}
+.solgraLeft{
+    background: url('./images/players/shlii.png') center no-repeat;
+    background-size: cover;
+}
+.solgraRight{
+    background: url('./images/players/Solgra.png') center no-repeat;
+    background-size: cover;
+}
+.wshareedLeft{
+    background: url('./images/players/cactus.png') center no-repeat;
+    background-size: cover;
+}
+.wshareedRight{
+    background: url('./images/players/wshareed.png') center no-repeat;
+    background-size: cover;
+}
+
+.playerTitle{
+    z-index: 2;
+    height: 7.5rem;
+    width: 15rem;
+    position: relative;
+    display: block;
+    margin: 0 auto -7.2rem;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border: none;
+}
+
+.dmTitle{
+    background: url('./images/buttons/dungeonmaster.png') center no-repeat;
+}
+
+.capoTitle {
+    background: url('./images/buttons/caporius.png') center no-repeat;
+}
+
+.emTitle {
+    background: url('./images/buttons/em.png') center no-repeat;
+}
+
+.fannybawsTitle{
+    background: url('./images/buttons/fannybaws.png') center no-repeat;
+}
+
+.ghershahTitle{
+    background: url('./images/buttons/ghershah.png') center no-repeat;
+}
+
+.osgurTitle{
+    background: url('./images/buttons/osgur.png') center no-repeat;
+}
+
+.solgraTitle{
+    background: url('./images/buttons/solgra.png') center no-repeat;
+}
+
+.wshareedTitle{
+    background: url('./images/buttons/wshareed.png') center no-repeat;
+}
+
+
+.playerbtn {
+    width:15rem;
+    height:7.5rem;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border: none;
+}
+
+.playerbtn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.dungeonmaster-btn {
+    background: url('./images/buttons/dungeonmaster.png') center no-repeat;
+}
+
+.caporius-btn {
+    background: url('./images/buttons/caporius.png') center no-repeat;
+}
+
+.em-btn {
+    background: url('./images/buttons/em.png') center no-repeat;
+}
+
+.fannybaws-btn {
+    background: url('./images/buttons/fannybaws.png') center no-repeat;
+}
+
+.ghershah-btn {
+    background: url('./images/buttons/ghershah.png') center no-repeat;
+}
+
+.osgur-btn {
+    background: url('./images/buttons/osgur.png') center no-repeat;
+}
+
+.solgra-btn {
+    background: url('./images/buttons/solgra.png') center no-repeat;
+}
+
+.wshareed-btn {
+    background: url('./images/buttons/wshareed.png') center no-repeat;
+}
