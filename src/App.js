@@ -14,17 +14,22 @@ import Twitch from './twitch';
 import video from './video/glass.mp4';
 import CookieConsent from "react-cookie-consent";
 import Konami from 'react-konami-code';
+import EbonDeath from './ebondeath';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      konamiDynamicClass: ''
+      background: '',
+      konamiDynamicClass: '',
+      thing: '',
+      videoBG: 'vidOn'
     }
 
     this.closeNav = this.closeNav.bind(this);
     this.konamiClass = this.konamiClass.bind(this);
+    this.handleBackground = this.handleBackground.bind(this);
   }
 
   componentDidMount(){
@@ -40,6 +45,28 @@ class App extends Component {
     this.setState({
       konamiDynamicClass: 'konami'
     })
+  }
+
+  handleBackground(value){
+    switch (value){
+      case 'welcome' :
+        this.setState({
+          background: value,
+          videoBG: 'vidOn'
+        });
+        break;
+      case 'dungeonMaster' :
+        this.setState({
+          background: value,
+          videoBG: 'vidOff'
+        });
+        break;
+      default :
+        this.setState({
+          background: value,
+          videoBG: 'vidOn'
+        });
+    }
   }
 
   render(){
@@ -65,6 +92,15 @@ class App extends Component {
               <li>
                 <NavLink
                   exact
+                  to="/ebondeath"
+                  activeClassName="active"
+                  onClick={this.closeNav}>
+                    Ebon Death
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  exact
                   to="/twitch/"
                   activeClassName="active"
                   onClick={this.closeNav}>
@@ -84,16 +120,21 @@ class App extends Component {
           </nav>
 
           <Switch>
-            <Route exact path="/" component={Welcome} />
-            <Route exact path="/twitch/" component={Twitch} />
-            <Route exact path="/games/" component={Games} />
+            <Route exact path="/">
+              <Welcome handleBackground={this.handleBackground}/>
+            </Route>
+            <Route exact path="/ebondeath/">
+              <EbonDeath handleBackground={this.handleBackground} />
+            </Route>
+            <Route exact path="/twitch/"><Twitch /></Route>
+            <Route exact path="/games/"><Games /></Route>
           </Switch>
 
           <footer>
             <p>The Geeks Codex Ⓒ 2021</p>
             <a target="_blank" href="http://www.videezy.com">Broll by Videezy</a>
           </footer>
-          <video playsInline autoPlay muted loop id="bgvid">
+          <video playsInline autoPlay muted loop id="bgvid" className={`${this.state.videoBG} video`}>
             <source src={video} type="video/webm"/>
           </video>
           <Konami action={this.konamiClass}></Konami>

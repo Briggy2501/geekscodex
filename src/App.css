@@ -38,6 +38,10 @@ video {
   left: 0;
   z-index: 0;
 }
+
+.vidOff {
+  display: none;
+}
  
 h1 {
   font-size: 3rem;
@@ -184,10 +188,10 @@ h1 {
 .main {
   padding-bottom: 0rem;
   width: 100%;
-  margin: 5.67rem auto 0;
+  margin: 5.57rem auto 0;
   z-index: 1;
   position: absolute;
-  height: calc(100% - 10.8rem);
+  height: calc(100% - 10.6rem);
   display: block;
   overflow-y: scroll;
 }
@@ -206,6 +210,10 @@ h1 {
   /* The Actual Scrolling bar */
   background-color: #333;
   border-radius: 5rem;
+}
+
+.ebondeath {
+  background: url('./images/edus.jpg') center no-repeat;
 }
 
 .logo{
@@ -515,6 +523,10 @@ footer a.active {
     background-size: auto;
     height: 5.4rem;
     width: 80rem;
+  }
+
+  .topnav .menu-btn:checked ~ .menu {
+    width: 90vw;
   }
  
   .topnav li {

@@ -11,7 +11,7 @@ class Welcome extends Component {
     }
 
     componentDidMount () {
-
+        this.props.handleBackground('welcome');
     }
     
     render(){
