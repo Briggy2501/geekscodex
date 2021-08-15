@@ -101,20 +101,14 @@ class App extends Component {
               <li>
                 <NavLink
                   exact
-                  to="/twitch/"
-                  activeClassName="active"
-                  onClick={this.closeNav}>
-                    Twitch
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  exact
                   to="/games/"
                   activeClassName="active"
                   onClick={this.closeNav}>
                     Games
                 </NavLink>
+              </li>
+              <li>
+                <a href="http://www.twitch.tv/geekscodex" target="_blank" rel="noopener">Twitch</a>
               </li>
             </ul>
           </nav>
